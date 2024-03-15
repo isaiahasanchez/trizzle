@@ -1,0 +1,261 @@
+{
+  "questions": [
+    {
+      "id": 2,
+      "text": "Who are the top 5 home run leaders for the Dodgers?",
+      "options": ["Duke Snider", "Gil Hodges", "Eric Karros", "Roy Campanella", "Ron Cey", "Steve Garvey", "Matt Kemp", "Carl Furillo", "Mike Piazza", "Max Muncy", "Pedro Guerrero", "Raul Mondesi", "Andre Ethier", "Shawn Green", "Justin Turner", "Willie Davis", "Cody Bellinger", "Adrián Beltré", "Dusty Baker", "Dolph Camilli", "Mike Marshall", "Jackie Robinson", "Zack Wheat"],
+      "answer": ["Duke Snider", "Gil Hodges", "Eric Karros", "Roy Campanella", "Ron Cey"]
+    },
+    {
+      "id": 3,
+      "text": "What are the 5 largest oceans in the world by area?",
+      "options": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Southern Ocean", "Arctic Ocean", "Coral Sea", "American Mediterranean Sea", "South China Sea", "Caribbean Sea", "Mediterranean Sea", "Bering Sea", "Gulf of Mexico", "Sargasso Sea", "Sea of Okhotsk", "East China Sea", "Hudson Bay", "Red Sea", "Baltic Sea", "North Sea", "Andaman Sea", "Black Sea", "Adriatic Sea", "Persian Gulf"],
+      "answer": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Southern Ocean", "Arctic Ocean"]
+    },
+    {
+      "id": 4,
+      "text": "Which 5 countries have the largest populations?",
+      "options": ["China", "India", "United States", "Indonesia", "Pakistan", "Brazil", "Nigeria", "Bangladesh", "Russia", "Mexico", "Japan", "Ethiopia", "Philippines", "Egypt", "Vietnam", "DR Congo", "Turkey", "Iran", "Germany", "Thailand", "France", "Italy", "United Kingdom"],
+      "answer": ["China", "India", "United States", "Indonesia", "Pakistan"]
+    },
+    {
+      "id": 5,
+      "text": "Name the first 5 presidents of the United States.",
+      "options": ["George Washington", "John Adams", "Thomas Jefferson", "James Madison", "James Monroe", "John Quincy Adams", "Andrew Jackson", "Martin Van Buren", "William Henry Harrison", "John Tyler", "James K. Polk", "Zachary Taylor", "Millard Fillmore", "Franklin Pierce", "James Buchanan", "Abraham Lincoln", "Andrew Johnson", "Ulysses S. Grant", "Rutherford B. Hayes", "James A. Garfield", "Chester A. Arthur", "Grover Cleveland", "Benjamin Harrison"],
+      "answer": ["George Washington", "John Adams", "Thomas Jefferson", "James Madison", "James Monroe"]
+    },
+    {
+      "id": 6,
+      "text": "Which 5 elements have the highest atomic numbers?",
+      "options": ["Oganesson", "Livermorium", "Tennessine", "Moscovium", "Nihonium", "Flerovium", "Copernicium", "Roentgenium", "Darmstadtium", "Meitnerium", "Hassium", "Seaborgium", "Bohrium", "Dubnium", "Rutherfordium", "Lawrencium", "Nobelium", "Mendelevium", "Fermium", "Einsteinium", "Californium", "Berkelium", "Curium"],
+      "answer": ["Oganesson", "Livermorium", "Tennessine", "Moscovium", "Nihonium"]
+    },
+    {
+      "id": 7,
+      "text": "Who are the top Dodgers home run leaders since 2010?",
+      "options": ["Max Muncy", "Justin Turner", "Cody Bellinger", "Matt Kemp", "Joc Pederson", "Mookie Betts", "Yasiel Puig", "Chris Taylor", "Corey Seager", "Adrian Gonzalez", "Will Smith", "Yasmani Grandal", "Andre Ethier", "Kiké Hernández", "AJ Pollock", "Freddie Freeman", "Hanley Ramirez", "A.J. Ellis", "Austin Barnes", "James Loney", "Russell Martin", "Nomar Garciaparra", "Manny Ramirez"],
+      "answer": ["Max Muncy", "Justin Turner", "Cody Bellinger", "Matt Kemp", "Joc Pederson"]
+    },
+    {
+      "id": 8,
+      "text": "Name the planets in our solar system from closest to the sun.",
+      "options": ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto", "Ceres", "Eris", "Makemake", "Haumea", "Vesta", "Pallas", "Hygiea", "Sedna", "Quaoar", "Gonggong", "Orcus", "Ixion", "Varuna", "Eros"],
+      "answer": ["Mercury", "Venus", "Earth", "Mars", "Jupiter"]
+    },
+    {
+      "id": 9,
+      "text": "Besides McDonald's, which fast food burger chains represent the largest in systemwide sales?",
+      "options": [
+        "Wendy's",
+        "Burger King",
+        "Sonic Drive-In",
+        "Jack in the Box",
+        "Whataburger",
+        "Culver's",
+        "Five Guys",
+        "Hardee's",
+        "Carl's Jr.",
+        "In-N-Out Burger",
+        "Shake Shack",
+        "Checkers/Rally's",
+        "Freddy's Frozen Custard & Steakburgers",
+        "A&W Restaurants",
+        "White Castle",
+        "Smashburger",
+        "Fatburger",
+        "Krystal",
+        "Steak 'n Shake",
+        "Fuddruckers",
+        "Bobby's Burger Palace",
+        "Umami Burger",
+        "The Habit Burger Grill"
+      ],
+      "answer": [
+        "Wendy's",
+        "Burger King",
+        "Sonic Drive-In",
+        "Jack in the Box",
+        "Whataburger"
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Which are the top cities in the U.S. by population that start with the letter 'S'?",
+      "options": [
+        "San Antonio",
+        "San Diego",
+        "San Jose",
+        "San Francisco",
+        "Seattle",
+        "Sacramento",
+        "Saint Louis",
+        "Saint Paul",
+        "Saint Petersburg",
+        "Salem",
+        "Salt Lake City",
+        "San Bernardino",
+        "Santa Ana",
+        "Santa Clarita",
+        "Santa Rosa",
+        "Savannah",
+        "Scottsdale",
+        "Shreveport",
+        "Sioux Falls",
+        "Spokane",
+        "Springfield",
+        "Stamford",
+        "Syracuse"
+      ],
+      "answer": [
+        "San Antonio",
+        "San Diego",
+        "San Jose",
+        "San Francisco",
+        "Seattle"
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Which original streaming program had the most minutes viewed according to Nielsen's 2022 rankings?",
+      "options": [
+        "Stranger Things",
+        "Ozark",
+        "Wednesday",
+        "Cobra Kai",
+        "Bridgerton",
+        "Virgin River",
+        "Dahmer",
+        "Love Is Blind",
+        "Inventing Anna",
+        "The Crown",
+        "The Boys",
+        "Great British Baking Show",
+        "The Umbrella Academy",
+        "The Last Kingdom",
+        "The Rings of Power",
+        "Money Heist",
+        "Lucifer",
+        "The Witcher",
+        "You",
+        "Emily in Paris",
+        "Squid Game",
+        "Outer Banks",
+        "Maid"
+      ],
+      "answer": ["Stranger Things", "Ozark",
+      "Wednesday",
+      "Cobra Kai",
+      "Bridgerton"]
+    },
+    {
+      "id": 12,
+      "text": "Which of these home video game consoles have the highest estimated lifetime unit sales as of December 31, 2023?",
+      "options": [
+        "PlayStation 2",
+        "Nintendo Switch",
+        "PlayStation 4",
+        "Wii",
+        "PlayStation 3",
+        "Xbox 360",
+        "Nintendo Entertainment System",
+        "Xbox One",
+        "PlayStation",
+        "Super Nintendo Entertainment System",
+        "PlayStation 5",
+        "Xbox",
+        "Nintendo 64",
+        "Sega Genesis",
+        "Atari 2600",
+        "GameCube",
+        "Xbox Series X/S",
+        "Sega Saturn",
+        "Dreamcast",
+        "Wii U",
+        "Sega Dreamcast",
+        "Atari Jaguar",
+        "Intellivision"
+      ],
+      "answer": [
+        "PlayStation 2",
+        "Nintendo Switch",
+        "PlayStation 4",
+        "PlayStation",
+        "Wii"
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Match these cereal slogans to their brands: 1) The taste you can see 2) Snap! Crackle! Pop! 3) They're magically delicious. 4) Kid-tested. Mother-approved.! 5) The breakfast of champions.",
+      "options": [
+        "Kellogg's Frosted Flakes",
+        "Rice Krispies",
+        "Lucky Charms",
+        "Cocoa Puffs",
+        "Cheerios",
+        "Froot Loops",
+        "Wheaties",
+        "Cinnamon Toast Crunch",
+        "Honey Nut Cheerios",
+        "Apple Jacks",
+        "Corn Flakes",
+        "Cap'n Crunch",
+        "Golden Grahams",
+        "Honeycomb",
+        "Reese's Puffs",
+        "Trix",
+        "Special K",
+        "Life",
+        "Frosted Mini-Wheats",
+        "Raisin Bran",
+        "Count Chocula",
+        "Cocoa Krispies",
+        "Kix"
+      ],
+      "answer": [
+        "Cinnamon Toast Crunch",
+        "Rice Krispies",
+        "Lucky Charms",
+        "Kix",
+        "Wheaties"
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Match these animal facts to the corresponding animals: 1) The only bird that can fly backward. 2) Known for its eight arms and high intelligence. 3) Has a distinctive black and white coat used for camouflage in the snow. 4) The largest land animal. 5) Can sleep for up to 22 hours a day, living most of its life in trees.",
+      "options": [
+        "Hummingbird",
+        "Octopus",
+        "Polar Bear",
+        "Elephant",
+        "Koala",
+        "Cheetah",
+        "Blue Whale",
+        "Giraffe",
+        "Penguin",
+        "Tiger",
+        "Kangaroo",
+        "Rhinoceros",
+        "Lion",
+        "Hippopotamus",
+        "Dolphin",
+        "Crocodile",
+        "Ostrich",
+        "Wolf",
+        "Leopard",
+        "Zebra",
+        "Orangutan",
+        "Panda",
+        "Camel"
+      ],
+      "answer": [
+        "Hummingbird",
+        "Octopus",
+        "Polar Bear",
+        "Elephant",
+        "Koala"
+      ]
+    }    
+    
+    
+  ]
+}
