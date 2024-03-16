@@ -46,7 +46,7 @@ const processQuestion = (question) => {
   
   
 const Homepage = () => {
-    const [question, setQuestion] = useState(null);
+
     const [processedQuestion, setProcessedQuestion] = useState([]); // To store processed questions
     const [options, setOptions] = useState([]);
     // Correct answer expected to be an array of values
@@ -72,7 +72,7 @@ const Homepage = () => {
                     const randomIndex = Math.floor(Math.random() * json.questions.length);
                     const randomQuestion = json.questions[randomIndex];
     
-                    setQuestion(randomQuestion.text);
+
                     const processed = processQuestion(randomQuestion.text);
                     setProcessedQuestion(processed);
                     // Optionally shuffle options
