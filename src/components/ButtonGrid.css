@@ -2,11 +2,21 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    margin: 0 auto;
     padding: 20px;
-    margin-left: 350px;
-    margin-right: 350px;
+    width: 100%; /* Ensure it takes full width */
+    max-width: 500px; /* Adjust based on your preference */
+    margin: 0 auto; /* This centers the grid */
 }
+
+@media screen and (max-width: 600px) {
+    .gridContainer {
+        grid-template-columns: repeat(3, 1fr); /* Adjust column count for smaller screens */
+        gap: 5px;
+        padding: 10px;
+        max-width: 90%; /* Allow more width flexibility */
+    }
+}
+
 
 .button {
     height: 50px;

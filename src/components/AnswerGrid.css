@@ -11,14 +11,14 @@
 }
 
 .answerBox {
-    width: 60px;
-    height: 60px;
-    border: 1px solid black;
-    margin: 2px;
+    width: 90px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 10px;
+    border: 1px solid #ddd;
+    margin: 2px;
+    font-size: 12px; /* font for the answers */
 }
 
 .answerGridContainer .labelRow {
@@ -28,7 +28,7 @@
 }
 
 .answerGridContainer .labelBox {
-    width: 60px; /* Match the width of your answerBox */
+    width: 85px; /* Match the width of your answerBox */
     height: 30px; /* Height can be less than your answerBox */
     line-height: 30px; /* Center the number vertically */
     text-align: center;

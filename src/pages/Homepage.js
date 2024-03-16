@@ -21,9 +21,33 @@ const shuffleArray = (array) => {
   
     return array;
   }
+
+const processQuestion = (question) => {
+  // Detect the position where numbering starts, assuming "1)" is the start.
+  const splitPosition = question.indexOf("1)");
+  
+  // If "1)" is not found or at the very start, return the question as is
+  if (splitPosition <= 0) {
+    return [question];
+  }
+
+  // Separate the introductory text from the rest
+  const intro = question.substring(0, splitPosition).trim();
+  const items = question.substring(splitPosition);
+
+  // Split the items part into individual questions
+  const splitItems = items.split(/\s*(?=\d\))/).map(item => item.trim()).filter(Boolean);
+
+  // Combine the intro with the split, numbered items
+  return [intro, ...splitItems];
+};
+
+  
+  
   
 const Homepage = () => {
     const [question, setQuestion] = useState(null);
+    const [processedQuestion, setProcessedQuestion] = useState([]); // To store processed questions
     const [options, setOptions] = useState([]);
     // Correct answer expected to be an array of values
     const [correctAnswer, setCorrectAnswer] = useState([]);
@@ -49,6 +73,8 @@ const Homepage = () => {
                     const randomQuestion = json.questions[randomIndex];
     
                     setQuestion(randomQuestion.text);
+                    const processed = processQuestion(randomQuestion.text);
+                    setProcessedQuestion(processed);
                     // Optionally shuffle options
                     const shuffledOptions = shuffleArray([...randomQuestion.options]);
                     setOptions(shuffledOptions);
@@ -177,7 +203,14 @@ const Homepage = () => {
     return (
         <div className="App">
             <h1>Trizzle</h1>
-            {question && <div>Question: {question}</div>}
+            {processedQuestion.length > 0 && (
+                <div className="question">
+                    {/* Check if question needs to be displayed as an array */}
+                    {processedQuestion.map((line, index) => (
+                        <div key={index}>{line}</div>
+                    ))}
+                </div>
+            )}
             <section style={{margin:"15px"}} className={gameOver ? "flash" : ""}>{displayResult}</section>
             <AnswerGrid attempts={attempts} fadeIn={revealFinalAnswer} />
 

@@ -9,16 +9,6 @@
     display: flex;
 }
 
-.answerBox {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ddd;
-    margin: 2px;
-    font-size: 12px; /* font for the answers */
-}
 
 .green {
     background-color: rgb(97, 140, 85);
@@ -40,4 +30,8 @@
 
 .fadeIn {
     animation: fadeIn 1s ease-in;
+}
+
+.question {
+    padding: 0 5rem;
 }

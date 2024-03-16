@@ -4,7 +4,7 @@ const AnswerGrid = ({ attempts, gameOver, revealCorrect }) => {
     return (
         <div className="answerGridContainer">
             <div className="labelRow"> {/* Add this row for the numbers */}
-                {[1, 2, 3, 4, 5].map(number => (
+                {['1st', '2nd', '3rd', '4th', '5th'].map(number => (
                     <div key={number} className="labelBox">{number}</div>
                 ))}
             </div>
