@@ -1,28 +1,20 @@
+/* ButtonGrid.css */
 .gridContainer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     padding: 20px;
-    width: 100%; /* Ensure it takes full width */
-    max-width: 500px; /* Adjust based on your preference */
-    margin: 0 auto; /* This centers the grid */
+    width: auto; /* Ensure it's automatically adjusting to content */
+    max-width: 500px; /* Adjust as needed */
+    margin: 20px auto; /* Ensures centering */
 }
 
-@media screen and (max-width: 600px) {
-    .gridContainer {
-        grid-template-columns: repeat(3, 1fr); /* Adjust column count for smaller screens */
-        gap: 5px;
-        padding: 10px;
-        max-width: 90%; /* Allow more width flexibility */
-    }
-}
-
-
-.button {
+.button, .deleteButton, .enterButton {
     height: 50px;
     font-size: 14px;
     color: rgb(240, 239, 239);
     background-color: rgb(112, 111, 111);
+    width: 100%; /* Make buttons expand to fill their cells */
 }
 
 .deleteButton {
@@ -31,4 +23,17 @@
 
 .enterButton {
     background-color: rgb(110, 130, 240);
+}
+@media screen and (max-width: 600px) {
+    .gridContainer {
+        gap: 5px; /* Reduce the gap */
+        padding: 10px;
+        max-width: 90%; /* Allow for some margin on the sides */
+    }
+
+    .button, .deleteButton, .enterButton {
+        padding: 0; /* Optional: reduce padding to save space */
+        font-size: 12px; /* Reduce font size to fit smaller buttons */
+        margin: 2px; /* Reduce margin to save space */
+    }
 }

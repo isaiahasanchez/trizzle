@@ -5,34 +5,46 @@
     margin-top: 20px;
 }
 
+.labelRow {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px; /* Adjust based on total width of answer boxes */
+    height: 18px;
+}
+
+.labelBox {
+    width: 60px; /* Match width of answer boxes */
+    text-align: center;
+    margin: 0 2px;
+}
+
 .attemptRow {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Allows rows to wrap on smaller screens */
+    max-width: 500px; /* Adjust this value based on the total width of your 5 boxes */
 }
 
 .answerBox {
-    width: 90px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #ddd;
     margin: 2px;
-    font-size: 12px; /* font for the answers */
+    font-size: 12px;
 }
 
-.answerGridContainer .labelRow {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10px; /* Adjust as needed */
-}
-
-.answerGridContainer .labelBox {
-    width: 85px; /* Match the width of your answerBox */
-    height: 30px; /* Height can be less than your answerBox */
-    line-height: 30px; /* Center the number vertically */
-    text-align: center;
-    margin: 0 5px; /* Adjust the margin as needed */
-    font-weight: bold; /* Optional: makes the numbers stand out */
-    /* Add additional styling as needed */
+@media screen and (max-width: 600px) {
+    .answerGridContainer, .attemptRow {
+        max-width: 100%; /* Adjusts to screen size */
+        justify-content: center; /* Ensures content is centered */
+    }
+    .answerBox, .labelBox {
+        width: 48px; /* Adjust box size for smaller screens */
+        height: 48px;
+        font-size: 10px; /* Adjust font size for readability */
+    }
 }
