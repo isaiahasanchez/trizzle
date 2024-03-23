@@ -42,8 +42,8 @@
     .gridContainer {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 10px;
-        padding: 20px;
+        gap: 5px;
+        padding: 10px;
         width: auto; /* Ensure it's automatically adjusting to content */
         max-width: 400px; /* Adjust as needed */
         margin: 20px auto; /* Ensures centering */
@@ -51,10 +51,11 @@
     
     .button, .deleteButton, .enterButton {
         height: 50px;
-        font-size: 14px;
+        font-size: 11px;
         color: rgb(240, 239, 239);
         background-color: rgb(112, 111, 111);
         width: 100%; /* Make buttons expand to fill their cells */
+        padding: 0;
     }
     .deleteButton {
         background-color: rgb(225, 129, 138);
