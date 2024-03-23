@@ -48,3 +48,12 @@
         font-size: 10px; /* Adjust font size for readability */
     }
 }
+
+/* for sideways on phone */
+@media screen and (orientation: landscape) {
+    .answerBox, .labelBox {
+        width: 48px; /* Adjust box size for smaller screens */
+        height: 48px;
+        font-size: 10px; /* Adjust font size for readability */
+    }
+}

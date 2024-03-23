@@ -203,25 +203,30 @@ const Homepage = () => {
     return (
         <div className="App">
             <h1>Trizzle</h1>
-            {processedQuestion.length > 0 && (
-                <div className="question">
-                    {/* Check if question needs to be displayed as an array */}
-                    {processedQuestion.map((line, index) => (
-                        <div key={index}>{line}</div>
-                    ))}
+            <div className="contentWrapper">
+                <div className="questionAndAnswerContainer">
+                    {processedQuestion.length > 0 && (
+                        <div className="question">
+                            {/* Display processed question */}
+                            {processedQuestion.map((line, index) => (
+                                <div key={index}>{line}</div>
+                            ))}
+                        </div>
+                    )}
+                    <section style={{margin: "15px"}} className={gameOver ? "flash" : ""}>{displayResult}</section>
+                    <AnswerGrid attempts={attempts} fadeIn={revealFinalAnswer} />
                 </div>
-            )}
-            <section style={{margin:"15px"}} className={gameOver ? "flash" : ""}>{displayResult}</section>
-            <AnswerGrid attempts={attempts} fadeIn={revealFinalAnswer} />
-
-            <ButtonGrid 
-                options={options} 
-                onSelectOption={handleSelectOption} 
-                onDeleteLast={handleDeleteLast} 
-                onCheckAnswers={handleCheckAnswers} 
-                disabled={gameOver}
-                optionStatuses={optionStatuses}
-            />
+                <div className="buttonGridContainer">
+                    <ButtonGrid
+                        options={options}
+                        onSelectOption={handleSelectOption}
+                        onDeleteLast={handleDeleteLast}
+                        onCheckAnswers={handleCheckAnswers}
+                        disabled={gameOver}
+                        optionStatuses={optionStatuses}
+                    />
+                </div>
+            </div>
         </div>
     );
     

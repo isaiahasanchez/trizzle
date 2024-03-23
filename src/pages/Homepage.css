@@ -36,3 +36,22 @@
     padding: 0 1rem;
     font-size: 1rem;
 }
+
+@media screen and (orientation: landscape) {
+    .App .contentWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .questionAndAnswerContainer, .buttonGridContainer {
+        flex: 1;
+        padding: 0 20px;
+    }
+
+    .question {
+        padding: 0;
+        font-size: 1rem;
+    }
+}
