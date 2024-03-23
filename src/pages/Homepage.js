@@ -203,17 +203,18 @@ const Homepage = () => {
     return (
         <div className="App">
             <h1>Trizzle</h1>
+            <div className="questionContainer">
+                {processedQuestion.length > 0 && (
+                    <div className="question">
+                        {processedQuestion.map((line, index) => (
+                            <div key={index}>{line}</div>
+                        ))}
+                    </div>
+                )}
+                <section style={{margin: "15px"}} className={gameOver ? "flash" : ""}>{displayResult}</section>
+            </div>
             <div className="contentWrapper">
                 <div className="questionAndAnswerContainer">
-                    {processedQuestion.length > 0 && (
-                        <div className="question">
-                            {/* Display processed question */}
-                            {processedQuestion.map((line, index) => (
-                                <div key={index}>{line}</div>
-                            ))}
-                        </div>
-                    )}
-                    <section style={{margin: "15px"}} className={gameOver ? "flash" : ""}>{displayResult}</section>
                     <AnswerGrid attempts={attempts} fadeIn={revealFinalAnswer} />
                 </div>
                 <div className="buttonGridContainer">
@@ -229,6 +230,7 @@ const Homepage = () => {
             </div>
         </div>
     );
+    
     
 };
 
