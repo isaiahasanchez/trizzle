@@ -44,13 +44,13 @@
         grid-template-columns: repeat(5, 1fr);
         gap: 5px;
         padding: 10px;
-        width: auto; /* Ensure it's automatically adjusting to content */
+        width: 75%; /* Ensure it's automatically adjusting to content */
         max-width: 400px; /* Adjust as needed */
         margin: 20px auto; /* Ensures centering */
     }
     
     .button, .deleteButton, .enterButton {
-        height: 50px;
+        height: 45px;
         font-size: 11px;
         color: rgb(240, 239, 239);
         background-color: rgb(112, 111, 111);
