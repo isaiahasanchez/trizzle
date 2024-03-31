@@ -231,14 +231,46 @@ const Homepage = () => {
             <div>
                 ___________________________________________________
             </div>
+            <div>Trizzle is an engaging trivia and puzzle game that challenges your knowledge and problem-solving skills! Here's how to play:</div>
             <div>
-                ___________________________________________________
+                .
             </div>
             <div>
-                ___________________________________________________
+Start the Game: Each round presents you with a unique trivia question, ranging from general knowledge, match-the-following, to ranking questions and more.  
             </div>
             <div>
-                ___________________________________________________
+                .
+            </div>
+            <div>
+            Answer the Question: For standard trivia, select your answer from the options provided. For match-the-following or ranking questions, arrange your answers in the correct order. Use the on-screen buttons to input your choices. You have five attempts to get the right answer!
+            </div>
+            <div>
+                .
+            </div>
+            <div>
+
+            Submit Your Guess: Once you're confident with your answer, hit the "Submit" button to check your accuracy. The game will provide immediate feedback. Correct answers are highlighted in green, partially correct answers in yellow, and incorrect answers in gray.
+            </div>
+            <div>
+                .
+            </div>
+            <div>
+            Learn and Improve: If your first attempt isn't completely correct, use the feedback to adjust your answers. The goal is to find the correct sequence or answer before you run out of attempts.
+
+            </div>
+            <div>
+                .
+            </div>
+            <div>
+            Advance Through Questions: Successfully solving a question takes you to the next challenge, offering endless fun and learning. If you're stuck, don't worry! The "Next Question" button lets you move forward anytime.
+            </div>
+
+            <div>
+                .
+            </div>
+            <div>
+
+Enjoy and Expand Your Knowledge: Trizzle is designed to be both entertaining and educational. Whether you're testing your general knowledge or learning new facts, there's always something new to discover. 
             </div>
         </div>
     );
