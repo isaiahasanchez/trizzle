@@ -211,7 +211,7 @@ const Homepage = () => {
                         ))}
                     </div>
                 )}
-                <section style={{margin: "15px"}} className={gameOver ? "flash" : ""}>{displayResult}</section>
+                <section className={gameOver ? "flash" : ""}>{displayResult}</section>
             </div>
             <div className="contentWrapper">
                 <div className="questionAndAnswerContainer">

@@ -1,67 +1,31 @@
-/* ButtonGrid.css */
 .gridContainer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    padding: 20px;
-    width: auto; /* Ensure it's automatically adjusting to content */
-    max-width: 500px; /* Adjust as needed */
-    margin: 20px auto; /* Ensures centering */
-}
-
-.button, .deleteButton, .enterButton {
-    height: 50px;
-    font-size: 14px;
-    color: rgb(240, 239, 239);
-    background-color: rgb(112, 111, 111);
-    width: 100%; /* Make buttons expand to fill their cells */
-}
-
-.deleteButton {
-    background-color: rgb(225, 129, 138);
-}
-
-.enterButton {
-    background-color: rgb(110, 130, 240);
-}
-@media screen and (max-width: 600px) {
+    gap: 0.5rem;
+    margin: 0 auto;
+  }
+  
+  .button, .deleteButton, .enterButton {
+    width: 3.5rem;
+    height: 2.5rem;
+    color: #f0efef;
+    background-color: #706f6f;
+    border: none;
+    cursor: pointer;
+    border-radius: 6%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;/* FONT FOR JUST BUTTONS*/
+    font-size: 0.65rem;
+  }
+  
+  .deleteButton { background-color: #e1818a; }
+  .enterButton { background-color: #6e82f0; }
+  
+  /* @media screen and (max-width: 600px) {
     .gridContainer {
-        gap: 5px; /* Reduce the gap */
-        padding: 10px;
-        max-width: 90%; /* Allow for some margin on the sides */
+      gap: 0.5rem;
     }
-
     .button, .deleteButton, .enterButton {
-        padding: 0; /* Optional: reduce padding to save space */
-        font-size: 12px; /* Reduce font size to fit smaller buttons */
-        margin: 2px; /* Reduce margin to save space */
+      height: 2.5rem;
     }
-}
-
-@media screen and (orientation: landscape) {
-    .gridContainer {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 5px;
-        padding: 10px;
-        width: 75%; /* Ensure it's automatically adjusting to content */
-        max-width: 400px; /* Adjust as needed */
-        margin: 20px auto; /* Ensures centering */
-    }
-    
-    .button, .deleteButton, .enterButton {
-        height: 45px;
-        font-size: 11px;
-        color: rgb(240, 239, 239);
-        background-color: rgb(112, 111, 111);
-        width: 100%; /* Make buttons expand to fill their cells */
-        padding: 0;
-    }
-    .deleteButton {
-        background-color: rgb(225, 129, 138);
-    }
-    
-    .enterButton {
-        background-color: rgb(110, 130, 240);
-    }
-}
+  } */
+  

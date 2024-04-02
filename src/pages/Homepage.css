@@ -1,57 +1,79 @@
-/* Homepage.css */
-.answerGridContainer {
+  
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding: 1.5rem 0;
+    margin: 0 0 2rem 0;
+  }
+
+  
+  .question {
+    margin: 0 auto 0.2rem auto;
+    padding: 0 2rem;
+    font-size: 0.8rem;
+  }
+
+  .contentWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.attemptRow {
+    justify-content: space-around;
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  
+  /* Styling for question */
+  /* .questionContainer{
     display: flex;
-}
+    flex-direction: row;
+  } */
+
+  /* styling for game info message */
+  .questionContainer section{
+    font-size: 0.8rem;
+    min-height: 1rem;
+    color: yellow;
+  }
 
 
-.green {
-    background-color: rgb(97, 140, 85);
-}
+  .questionAndAnswerContainer, .buttonGridContainer{
+    display: flex;
+    align-items: center;
+    font-size: 0.65rem;/* font sizes for question and answer grid*/
+    margin-bottom: 0.5rem;
 
-.yellow {
-    background-color: rgb(170, 160, 76);
-}
-
-.gray {
-    background-color: rgb(58, 58, 58);
-}
-
-
-@keyframes fadeIn {
+  }
+  /* animation */
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .flash {
+    animation: flash 0.6s ease-in-out 3; /* Adjust timing and repetition as needed */
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-.fadeIn {
+  }
+  
+  .fadeIn {
     animation: fadeIn 1s ease-in;
-}
-
-.question {
-    padding: 0 1rem;
-    font-size: 13px;
-}
-
-@media screen and (orientation: landscape) {
-    .App .contentWrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding: 10px;
+  }
+  
+  /* Landscape Orientation Styles */
+  @media screen and (orientation: landscape) and (max-width: 900px) {
+    .contentWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0rem 0.8rem 1rem 0.8rem;
     }
-
+  
     .questionAndAnswerContainer, .buttonGridContainer {
-        flex: 1;
-        padding: 0;
+      width: 45%; /* Adjust based on your layout preference */
     }
-
-    .question {
-        padding: 0;
-        font-size: 13px;
-    }
-}
+  }
+  
