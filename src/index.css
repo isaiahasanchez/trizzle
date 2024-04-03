@@ -1,4 +1,11 @@
 /* Base Styles */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures it takes the full viewport height */
+}
+
 body, html {
   margin: 0;
   padding: 0;

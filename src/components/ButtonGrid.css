@@ -1,12 +1,12 @@
 .gridContainer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 0.5rem;
+    gap: 0.35rem;
     margin: 0 auto;
   }
   
   .button, .deleteButton, .enterButton {
-    max-width: 4rem;
+    max-width: 5rem;
     width: 100%;
     min-height: 2.5rem;
     height:fit-content;
@@ -16,7 +16,7 @@
     cursor: pointer;
     border-radius: 6%;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;/* FONT FOR JUST BUTTONS*/
-    font-size: 0.65rem;
+    font-size: clamp(0.4rem, 2vw, 0.9rem); /* Responsive font size */
     word-wrap: break-word;
     padding: 0;
   }
@@ -24,12 +24,3 @@
   .deleteButton { background-color: #e1818a; }
   .enterButton { background-color: #6e82f0; }
 
-  /* @media screen and (max-width: 600px) {
-    .gridContainer {
-      gap: 0.5rem;
-    }
-    .button, .deleteButton, .enterButton {
-      height: 2.5rem;
-    }
-  } */
-  
