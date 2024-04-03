@@ -54,6 +54,10 @@
       min-height: 3rem;
       height:fit-content;
     }
+
+    .gridContainer {
+        gap: 0.3rem;
+      }
   }
 
   /* Query for landscape mode on really big phones  */
@@ -62,6 +66,10 @@
       width: 4.2rem;
       font-size: 0.7rem;
     }
+
+    .gridContainer {
+        gap: 0.3rem;
+      }
   }
   /* @media screen and (max-width: 600px) {
     .gridContainer {
