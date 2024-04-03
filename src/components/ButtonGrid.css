@@ -48,11 +48,26 @@
   }
   
   /* Query for landscape mode on bigger phone  */
-  @media  (orientation: landscape) and (min-width:740px) and (max-width:840px) {
+  @media  (orientation: landscape) and (min-width:740px) and (max-width:800px) {
     .button, .deleteButton, .enterButton {
       width: 3.9rem;
       min-height: 3rem;
       height:fit-content;
+      font-size: 0.7rem;
+    }
+
+    .gridContainer {
+        gap: 0.3rem;
+      }
+  }
+
+  @media  (orientation: landscape) and (min-width:800px) and (max-width:840px) {
+    .button, .deleteButton, .enterButton {
+      width: 4.2rem;
+      min-height: 3rem;
+      height:fit-content;
+      font-size: 0.7rem;
+      color: orange;
     }
 
     .gridContainer {
