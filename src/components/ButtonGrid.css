@@ -6,8 +6,9 @@
   }
   
   .button, .deleteButton, .enterButton {
-    width: 3.5rem;
-    height: 2.5rem;
+    width: 3.6rem;
+    min-height: 2.5rem;
+    height:fit-content;
     color: #f0efef;
     background-color: #706f6f;
     border: none;
@@ -15,11 +16,53 @@
     border-radius: 6%;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;/* FONT FOR JUST BUTTONS*/
     font-size: 0.65rem;
+    word-wrap: break-word;
+    padding: 0;
   }
   
   .deleteButton { background-color: #e1818a; }
   .enterButton { background-color: #6e82f0; }
+
+  @media screen and (max-width: 290px) {
+    .button, .deleteButton, .enterButton {
+        width: 2.9rem;
+    }
+  }
+
+    /* Query for landscape mode on small phone  */
+    @media screen and (orientation: landscape) and (max-width:660px) {
+        .button, .deleteButton, .enterButton {
+          width: 2.5rem;
+          min-height: 2.4rem;
+          height:fit-content;
+        }
+      }
+
+  /* Query for landscape mode on phone  */
+  @media (orientation: landscape) and (min-width:660px) and (max-width:740px) {
+    .button, .deleteButton, .enterButton {
+      width: 2.9rem;
+      min-height: 2.8rem;
+      height:fit-content;
+    }
+  }
   
+  /* Query for landscape mode on bigger phone  */
+  @media  (orientation: landscape) and (min-width:740px) and (max-width:840px) {
+    .button, .deleteButton, .enterButton {
+      width: 3.9rem;
+      min-height: 3rem;
+      height:fit-content;
+    }
+  }
+
+  /* Query for landscape mode on really big phones  */
+  @media  (orientation: landscape) and (min-width:840px) and (max-width:940px) {
+    .button, .deleteButton, .enterButton {
+      width: 4.2rem;
+      font-size: 0.7rem;
+    }
+  }
   /* @media screen and (max-width: 600px) {
     .gridContainer {
       gap: 0.5rem;

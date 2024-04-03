@@ -18,8 +18,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 0rem 1rem 1rem 1rem;
+    justify-content: space-evenly;
+    padding: 0rem 0.5rem 1rem 0.5rem;
   }
   
   /* Styling for question */
@@ -35,13 +35,17 @@
     color: yellow;
   }
 
+  .questionAndAnswerContainer{
+    display: flex;
+    align-items: flex-end;
+  }
+
 
   .questionAndAnswerContainer, .buttonGridContainer{
     display: flex;
     align-items: center;
     font-size: 0.65rem;/* font sizes for question and answer grid*/
     margin-bottom: 0.5rem;
-
   }
   /* animation */
 @keyframes flash {
@@ -63,17 +67,41 @@
     animation: fadeIn 1s ease-in;
   }
   
-  /* Landscape Orientation Styles */
-  @media screen and (orientation: landscape) and (max-width: 900px) {
+  /* Landscape Orientation Styles to flip board to landscape*/
+  @media screen and (orientation: landscape) and (max-width: 940px) {
     .contentWrapper {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-      padding: 0rem 0.8rem 1rem 0.8rem;
+      justify-content: space-evenly;
+      padding: 0rem 0.5rem 1rem 0.5rem;
     }
   
     .questionAndAnswerContainer, .buttonGridContainer {
       width: 45%; /* Adjust based on your layout preference */
     }
   }
+
+      /* Media query for landscape on big phones */
+      @media  (orientation: landscape) and (min-width:740px) and (max-width:840px) {
+        .question {
+            margin: 0 auto 0.2rem auto;
+            padding: 0 2rem;
+            font-size: 0.82rem;
+          }
+      }
+
+          /* Media query for landscape on really big phones */
+    @media  (orientation: landscape) and (min-width:840px) and (max-width:940px) {
+        .question {
+            margin: 0 auto 0.2rem auto;
+            padding: 0 2rem;
+            font-size: 0.9rem;
+          }
+
+        .questionAndAnswerContainer{
+            font-size: 0.7rem;
+        }
+      }
+
+
   

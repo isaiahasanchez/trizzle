@@ -25,30 +25,61 @@
   
   .answerBox {
     width: 3.5rem;
-    height: 2.5rem;
+    min-height: 2.5rem;
+    height:fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #ddd;
-    margin: 0.25rem;
+    margin: 0.2rem;
+    padding: 0.2rem;
     background-color: #3a3a3a; /* Default background */
+    word-wrap: break-word;
+    word-break: break-all; 
   }
   
   .green { background-color: #618c55; }
   .yellow { background-color: #aaa04c; }
   .gray { background-color: #3a3a3a; }
-/*   
-  @media screen and (max-width: 600px) {
+  
+  @media screen and (max-width: 290px) {
     .answerBox {
-      width: 3.6rem;
+      width: 2.9rem;
       height: 2.5rem;
+    }
+  }
+
+    /* Media query for landscape on phones */
+    @media screen and (orientation: landscape) and (max-width:660px) {
+        .answerBox, .labelBox {
+        width: 2.5rem;
+        min-height: 2rem;
+        height:fit-content;
+      }
+    }
+
+  /* Media query for landscape on phones */
+  @media (orientation: landscape) and (min-width:660px) and (max-width:740px) {    .answerBox, .labelBox {
+      width: 3rem;
+      min-height: 2.2rem;
+      height:fit-content;
     }
   }
   
-  @media screen and (orientation: landscape) {
-    .answerBox, .labelBox {
-      width: 3.6rem;
-      height: 2.5rem;
-    }
-  }
-   */
+    /* Media query for landscape on big phones */
+    @media  (orientation: landscape) and (min-width:740px) and (max-width:840px) {
+        .answerBox, .labelBox {
+          width: 3.6rem;
+          min-height: 2.2rem;
+          height:fit-content;
+        }
+      }
+
+          /* Media query for landscape on really big phones */
+    @media  (orientation: landscape) and (min-width:840px) and (max-width:940px) {
+        .answerBox, .labelBox {
+          width: 4rem;
+          min-height: 2.5rem;
+          height:fit-content;
+        }
+      }
