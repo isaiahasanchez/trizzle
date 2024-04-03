@@ -59,7 +59,7 @@
     }
 
   /* Media query for landscape on phones */
-  @media (orientation: landscape) and (min-width:660px) and (max-width:740px) {    .answerBox, .labelBox {
+  @media (orientation: landscape) and (min-width:660px) and (max-width:805px) {    .answerBox, .labelBox {
       width: 3rem;
       min-height: 2.2rem;
       height:fit-content;
@@ -67,7 +67,7 @@
   }
   
     /* Media query for landscape on big phones */
-    @media  (orientation: landscape) and (min-width:740px) and (max-width:840px) {
+    @media  (orientation: landscape) and (min-width:805px) and (max-width:870px) {
         .answerBox, .labelBox {
           width: 3.6rem;
           min-height: 2.2rem;
@@ -77,7 +77,7 @@
       }
 
           /* Media query for landscape on really big phones */
-    @media  (orientation: landscape) and (min-width:840px) and (max-width:940px) {
+    @media  (orientation: landscape) and (min-width:870px) and (max-width:940px) {
         .answerBox, .labelBox {
           width: 4rem;
           min-height: 2.5rem;

@@ -87,7 +87,7 @@
   }
 
       /* Media query for landscape on big phones */
-      @media  (orientation: landscape) and (min-width:740px) and (max-width:840px) {
+      @media  (orientation: landscape) and (min-width:805px) and (max-width:870px) {
         .question {
             font-size: 0.82rem;
             color: lightgreen;
@@ -95,9 +95,9 @@
       }
 
           /* Media query for landscape on really big phones */
-    @media  (orientation: landscape) and (min-width:840px) and (max-width:940px) {
+    @media  (orientation: landscape) and (min-width:870px) and (max-width:940px) {
         .question {
-            font-size: 1.1rem;
+            font-size: .85rem;
             color: lightcoral;
           }
 
