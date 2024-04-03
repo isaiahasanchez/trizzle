@@ -16,7 +16,7 @@
     cursor: pointer;
     border-radius: 6%;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;/* FONT FOR JUST BUTTONS*/
-    font-size: clamp(0.4rem, 2vw, 0.9rem); /* Responsive font size */
+    font-size: clamp(0.4rem, 3vw, 0.9rem); /* Responsive font size */
     word-wrap: break-word;
     padding: 0;
   }

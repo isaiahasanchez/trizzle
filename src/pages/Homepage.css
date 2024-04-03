@@ -11,7 +11,7 @@
   .question {
     margin: 0 auto 0.2rem auto;
     padding: 0 2rem;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
 
   .contentWrapper {
@@ -43,7 +43,7 @@
   .questionAndAnswerContainer, .buttonGridContainer{
     display: flex;
     align-items: center;
-    font-size: 0.65rem;/* font sizes for question and answer grid*/
+    font-size: 0.75rem;/* font sizes for question and answer grid*/
     margin-bottom: 0.5rem;
   }
   /* animation */
@@ -79,22 +79,22 @@
       width: 45%; /* Adjust based on your layout preference */
     }
 
-    .question {
+    /* .question {
         font-size: 0.82rem;
         color: lightblue;
-      }
+      } */
   }
 
       /* Media query for landscape on big phones */
-      @media  (orientation: landscape) and (min-width:805px) and (max-width:870px) {
+      /* @media  (orientation: landscape) and (min-width:805px) and (max-width:870px) {
         .question *{
-            font-size: 0.88rem;
+            font-size: 0.98rem;
             color: lightgreen;
           }
-      }
+      } */
 
           /* Media query for landscape on really big phones */
-    @media  (orientation: landscape) and (min-width:870px) and (max-width:940px) {
+    /* @media  (orientation: landscape) and (min-width:870px) and (max-width:940px) {
         .question {
             font-size: .9rem;
             color: lightcoral;
@@ -103,7 +103,7 @@
         .questionAndAnswerContainer{
             font-size: 0.7rem;
         }
-      }
+      } */
 
 
   
