@@ -1,5 +1,5 @@
   /* Homepage.css */
-  h1 {
+  .trizzle {
     font-size: 1.3rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid #eee;
@@ -81,10 +81,6 @@
       width: 45%; /* Adjust based on your layout preference */
     }
 
-    /* .question {
-        font-size: 0.82rem;
-        color: lightblue;
-      } */
   }
 
       /* Media query for landscape on big phones */

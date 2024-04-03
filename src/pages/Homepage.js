@@ -202,7 +202,7 @@ const Homepage = () => {
 
     return (
         <div className="App">
-            <h1>Trizzle</h1>
+            <h1 className="trizzle">Trizzle</h1>
             <div className="questionContainer">
                 {processedQuestion.length > 0 && (
                     <div >
