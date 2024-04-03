@@ -87,7 +87,7 @@
 
       /* Media query for landscape on big phones */
       @media  (orientation: landscape) and (min-width:805px) and (max-width:870px) {
-        .question {
+        .question *{
             font-size: 0.88rem;
             color: lightgreen;
           }
