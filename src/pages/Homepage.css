@@ -23,10 +23,9 @@
   }
   
   /* Styling for question */
-  /* .questionContainer{
-    display: flex;
-    flex-direction: row;
-  } */
+  .questionContainer{
+    font-size: 0.88rem;
+  }
 
   /* styling for game info message */
   .questionContainer section{
