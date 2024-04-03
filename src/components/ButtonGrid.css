@@ -64,7 +64,7 @@
   @media  (orientation: landscape) and (min-width:800px) and (max-width:840px) {
     .button, .deleteButton, .enterButton {
       width: 4.2rem;
-      min-height: 3rem;
+      min-height: 2.6rem;
       height:fit-content;
       font-size: 0.7rem;
       color: orange;

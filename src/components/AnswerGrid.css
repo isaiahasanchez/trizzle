@@ -70,7 +70,7 @@
     @media  (orientation: landscape) and (min-width:805px) and (max-width:870px) {
         .answerBox, .labelBox {
           width: 3.6rem;
-          min-height: 2rem;
+          min-height: 1.9rem;
           height:fit-content;
           margin: 0.15rem;
         }
