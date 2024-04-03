@@ -207,7 +207,7 @@ const Homepage = () => {
                 {processedQuestion.length > 0 && (
                     <div className="question">
                         {processedQuestion.map((line, index) => (
-                            <div key={index}>{line}</div>
+                            <div key={index} className="question">{line}</div>
                         ))}
                     </div>
                 )}
