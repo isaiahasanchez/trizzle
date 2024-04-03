@@ -1,4 +1,4 @@
-  
+  /* Homepage.css */
   h1 {
     font-size: 1.3rem;
     margin-bottom: 2rem;
@@ -9,10 +9,11 @@
 
   
   .question {
-    margin: 0 auto 0.2rem auto;
-    padding: 0 2rem;
+    margin: 0;
+    padding: 0;
     font-size: 0.95rem;
   }
+
 
   .contentWrapper {
     display: flex;
@@ -24,7 +25,8 @@
   
   /* Styling for question */
   .questionContainer{
-    font-size: 0.88rem;
+    margin: 0 auto 0.2rem auto;
+    padding: 0 2rem;
   }
 
   /* styling for game info message */
@@ -34,13 +36,13 @@
     color: yellow;
   }
 
-  .questionAndAnswerContainer{
+  .answerGridContainerAnswerContainer{
     display: flex;
     align-items: flex-end;
   }
 
 
-  .questionAndAnswerContainer, .buttonGridContainer{
+  .answerGridContainerAnswerContainer, .buttonGridContainer{
     display: flex;
     align-items: center;
     font-size: 0.75rem;/* font sizes for question and answer grid*/
@@ -75,7 +77,7 @@
       padding: 0rem 0.5rem 1rem 0.5rem;
     }
   
-    .questionAndAnswerContainer, .buttonGridContainer {
+    .answerGridContainerAnswerContainer, .buttonGridContainer {
       width: 45%; /* Adjust based on your layout preference */
     }
 
@@ -100,7 +102,7 @@
             color: lightcoral;
           }
 
-        .questionAndAnswerContainer{
+        .answerGridContainerAnswerContainer{
             font-size: 0.7rem;
         }
       } */

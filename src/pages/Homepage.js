@@ -205,7 +205,7 @@ const Homepage = () => {
             <h1>Trizzle</h1>
             <div className="questionContainer">
                 {processedQuestion.length > 0 && (
-                    <div className="question">
+                    <div >
                         {processedQuestion.map((line, index) => (
                             <div key={index} className="question">{line}</div>
                         ))}
@@ -214,7 +214,7 @@ const Homepage = () => {
                 <section className={gameOver ? "flash" : ""}>{displayResult}</section>
             </div>
             <div className="contentWrapper">
-                <div className="questionAndAnswerContainer">
+                <div className="answerGridContainerAnswerContainer">
                     <AnswerGrid attempts={attempts} fadeIn={revealFinalAnswer} />
                 </div>
                 <div className="buttonGridContainer">
