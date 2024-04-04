@@ -63,6 +63,7 @@
       width: 3rem;
       min-height: 2.2rem;
       height:fit-content;
+      color: green;
     }
   }
   
@@ -73,6 +74,7 @@
           min-height: 1.9rem;
           height:fit-content;
           margin: 0.15rem;
+          color: pink;
         }
       }
 
