@@ -74,11 +74,11 @@
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      padding: 0rem 0.5rem 1rem 0.5rem;
+      padding: 0rem 0.2rem 1rem 0.2rem;
     }
   
     .answerGridContainerAnswerContainer, .buttonGridContainer {
-      width: 45%; /* Adjust based on your layout preference */
+      width: 49%; /* Adjust based on your layout preference */
     }
 
   }

@@ -68,8 +68,8 @@
 
     /* Media query for landscape on phones iphone promax 14*/
     @media (orientation: landscape) and (min-width:800px) and (max-width:820px) {    .answerBox, .labelBox {
-      width: 3.8rem;
-      min-height: 2.2rem;
+      width: 4.1rem;
+      min-height: 2.45rem;
       height:fit-content;
     }
   }
@@ -77,8 +77,8 @@
     /* Media query for landscape on big phones */
     @media  (orientation: landscape) and (min-width:820px) and (max-width:890px) {
         .answerBox, .labelBox {
-          width: 3.9rem;
-          min-height: 1.9rem;
+          width: 4.4rem;
+          min-height: 2.5rem;
           height:fit-content;
           margin: 0.15rem;
         }
