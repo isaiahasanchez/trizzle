@@ -3,7 +3,11 @@ html {
   -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
 }
 
+
+
 body {
+  display: flex;
+  justify-content: center;
   text-align: center;
   color: #e9e7e7;
   background-color: #232323;
