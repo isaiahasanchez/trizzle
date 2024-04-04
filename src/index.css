@@ -1,11 +1,19 @@
 /* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This ensures that padding and borders don't affect the total width or height of an element */
+}
+
 html {
   -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+  background-color: white;
 }
 
 
 
 body {
+  
   display: flex;
   justify-content: center;
   text-align: center;
