@@ -1,0 +1,40 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* semi-transparent backdrop */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .modalContent {
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-width: 300px;
+    width: 90%;
+  }
+  
+  .checkboxContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .checkboxLabel {
+    margin: 0.3rem 0;
+  }
+  
+  .closeButton {
+    background-color: #bbb;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
