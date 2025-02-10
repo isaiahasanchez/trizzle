@@ -12,7 +12,8 @@
   }
   
   .modalContent {
-    background: #fff;
+    color: white;
+    background: #67a867;
     padding: 1rem 1.5rem;
     border-radius: 8px;
     max-width: 300px;
@@ -30,7 +31,7 @@
   }
   
   .closeButton {
-    background-color: #bbb;
+    background-color: #7c7c7c;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;

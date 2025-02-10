@@ -21,6 +21,7 @@ const CategorySelector = ({
                   checked={isChecked}
                   onChange={() => onToggleCategory(cat)}
                 />
+                {" "}
                 {cat}
               </label>
             );

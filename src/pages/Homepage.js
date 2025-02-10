@@ -303,25 +303,51 @@ const Homepage = () => {
   return (
     <div className="App">
       <h1 className="trizzle">Trizzle</h1>
-
-      <div className="questionContainer">
-        {processedQuestion.length > 0 && (
-          <div>
-            {processedQuestion.map((line, index) => (
-              <div key={index} className="question">
-                {line}
-              </div>
-            ))}
-          </div>
-        )}
-        <section className={gameOver ? "flash" : ""}>{displayResult}</section>
+  
+      {/* Container that holds QUESTION (left 2/3) and FILTER BUTTONS (right 1/3) */}
+      <div className="questionFilterContainer">
+        {/* Left side: Question Text */}
+        <div className="questionContent">
+          {processedQuestion.length > 0 && (
+            <div>
+              {processedQuestion.map((line, index) => (
+                <div key={index} className="question">
+                  {line}
+                </div>
+              ))}
+            </div>
+          )}
+          <section className={gameOver ? "flash" : ""}>{displayResult}</section>
+        </div>
+  
+        {/* Right side: Filter & Next Buttons */}
+        <div className="filterButtonsContainer">
+          <button
+            className="filterButton"
+            onClick={() => setShowCategoryModal(true)}
+          >
+            Filter by Categories
+          </button>
+          <button className="filterButton" onClick={handleNextQuestion}>
+            Next Question
+          </button>
+        </div>
       </div>
-
+  
+      {showCategoryModal && (
+        <CategorySelector
+          allCategories={allCategories}
+          selectedCategories={selectedCategories}
+          onToggleCategory={handleToggleCategory}
+          onClose={() => setShowCategoryModal(false)}
+        />
+      )}
+  
       <div className="contentWrapper">
         <div className="answerGridContainerAnswerContainer">
           <AnswerGrid attempts={attempts} fadeIn={revealFinalAnswer} />
         </div>
-
+  
         <div className="buttonGridContainer">
           <ButtonGrid
             options={options}
@@ -333,25 +359,7 @@ const Homepage = () => {
           />
         </div>
       </div>
-
-      {/* Filter by Categories and Next Question buttons */}
-      <div style={{ marginTop: "1rem" }}>
-        <button onClick={() => setShowCategoryModal(true)}>
-          Filter by Categories
-        </button>
-        &nbsp;
-        <button onClick={handleNextQuestion}>Next Question</button>
-      </div>
-
-      {showCategoryModal && (
-        <CategorySelector
-          allCategories={allCategories}
-          selectedCategories={selectedCategories}
-          onToggleCategory={handleToggleCategory}
-          onClose={() => setShowCategoryModal(false)}
-        />
-      )}
-
+  
       <div>___________________________________________________</div>
       <div>
         Trizzle is an engaging trivia and puzzle game that challenges your
@@ -398,6 +406,7 @@ const Homepage = () => {
       </div>
     </div>
   );
+  
 };
 
 export default Homepage;
