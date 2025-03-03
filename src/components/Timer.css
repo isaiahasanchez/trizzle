@@ -1,0 +1,70 @@
+/* Container & layout */
+.timerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem; /* spacing between timer and filter button */
+  }
+  
+  .timerDisplay {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Flashing red when time hits 0 */
+  .flashRed {
+    color: red;
+    animation: flash 0.8s alternate infinite;
+  }
+  
+  @keyframes flash {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.4;
+    }
+  }
+  
+  /* Controls wrapper */
+  .timerControls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem; /* slight spacing between control rows */
+  }
+  
+  /* Style ALL buttons in the timer controls 
+     so they match the pastel green style. */
+  .timerControls button {
+    background-color: #67a867; /* pastel green-ish */
+    color: #f0efef;
+    border: none;
+    cursor: pointer;
+    border-radius: 6%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: clamp(0.4rem, 3vw, 0.9rem);
+    word-wrap: break-word;
+    padding: 0.2rem 0.5rem; /* small and compact */
+    max-width: 4rem;
+    min-height: 1.5rem;
+    height: fit-content;
+  }
+  
+  /* The row of increment/decrement buttons for time adjusting */
+  .timeAdjustButtons {
+    display: flex;
+    gap: 0.3rem;
+  }
+  
+  /* If you'd like these 4 time-adjust buttons to be slightly smaller, 
+     you can override some properties here, for example: */
+  .timeAdjustButtons button {
+    max-width: none;  /* let them be narrower if needed */
+    min-height: auto; /* remove forced 2.5rem height */
+    font-size: clamp(0.4rem, 3vw, 0.8rem);
+    min-width: 3rem;  /* so they don't become too tiny */
+  }
+  

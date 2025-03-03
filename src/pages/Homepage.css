@@ -93,9 +93,6 @@
   margin-bottom: 1rem;
 }
 
-.questionContent {
-  /* No special widths needed here unless you want to add padding or spacing */
-}
 
 .filterButtonsContainer {
   display: flex;
@@ -110,7 +107,7 @@
    We'll call it .filterButton. 
 */
 .filterButton {
-  max-width: 8rem; /* or whatever size you want */
+  max-width: 4rem; /* or whatever size you want */
   width: 100%;
   min-height: 2.5rem;
   height: fit-content;
