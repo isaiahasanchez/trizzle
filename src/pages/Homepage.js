@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import ButtonGrid from "../components/ButtonGrid";
 import AnswerGrid from "../components/AnswerGrid";
-import CategorySelector from "../components/CategorySelector"; 
-import Timer from "../components/Timer";  // add this import
+import CategorySelector from "../components/CategorySelector";
+import Timer from "../components/Timer";  
 import "./Homepage.css"; 
 
 const shuffleArray = (array) => {
-  let currentIndex = array.length, randomIndex;
+  let currentIndex = array.length,
+    randomIndex;
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex],
-      array[currentIndex]
+      array[currentIndex],
     ];
   }
   return array;
@@ -34,22 +35,22 @@ const processQuestion = (question) => {
 };
 
 const Homepage = () => {
-  // -- Data states
+  // -------------- Data States --------------
   const [allQuestions, setAllQuestions] = useState([]);
   const [filteredQuestions, setFilteredQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
-  // -- Category filtering states
+  // -------------- Category Filter States --------------
   const [allCategories, setAllCategories] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [showCategoryModal, setShowCategoryModal] = useState(false);
 
-  // -- Question detail states
+  // -------------- Question Detail --------------
   const [processedQuestion, setProcessedQuestion] = useState([]);
   const [options, setOptions] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState([]);
 
-  // -- Game states
+  // -------------- Game States --------------
   const [displayResult, setDisplayResult] = useState("");
   const [attempts, setAttempts] = useState(
     Array.from({ length: 5 }, () =>
@@ -62,8 +63,12 @@ const Homepage = () => {
   const [optionStatuses, setOptionStatuses] = useState({});
   const [revealFinalAnswer, setRevealFinalAnswer] = useState(false);
 
+  // -------------- Image Modal States --------------
+  const [showImageModal, setShowImageModal] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState("");
+
   // ---------------------------------------------------------------------------
-  // 1) FETCH ENTIRE QUESTIONS LIST
+  // 1) FETCH THE ENTIRE QUESTIONS LIST
   // ---------------------------------------------------------------------------
   useEffect(() => {
     fetch("https://raw.githubusercontent.com/isaiahasanchez/trizzle-db/main/db.json")
@@ -72,7 +77,7 @@ const Homepage = () => {
         if (data.questions && data.questions.length > 0) {
           setAllQuestions(data.questions);
 
-          // Also build a unique list of categories
+          // Build a unique list of categories
           const categoriesSet = new Set();
           data.questions.forEach((q) => {
             if (q.categories && Array.isArray(q.categories)) {
@@ -115,7 +120,7 @@ const Homepage = () => {
       const questionObj = filteredQuestions[currentQuestionIndex];
       loadQuestion(questionObj);
     } else {
-      // If no questions, clear the UI
+      // If no questions available, clear the UI
       setProcessedQuestion([]);
       setOptions([]);
       setCorrectAnswer([]);
@@ -124,18 +129,20 @@ const Homepage = () => {
   }, [filteredQuestions, currentQuestionIndex]);
 
   const loadQuestion = (questionObj) => {
-    // Process question text
+    // Process question text (split into lines if it has "1)")
     const processed = processQuestion(questionObj.text);
     setProcessedQuestion(processed);
 
-    // Shuffle options (or remove shuffle if not wanted)
+    // Shuffle the options if you want them in random order
     const shuffledOptions = shuffleArray([...questionObj.options]);
     setOptions(shuffledOptions);
 
     // Prepare correct answer array
-    setCorrectAnswer(questionObj.answer.map((ans) => ({ value: ans, status: "" })));
+    setCorrectAnswer(
+      questionObj.answer.map((ans) => ({ value: ans, status: "" }))
+    );
 
-    // Reset game states
+    // Reset game states for a new question
     setAttempts(
       Array.from({ length: 5 }, () =>
         Array.from({ length: 5 }, () => ({ value: "", status: "" }))
@@ -150,7 +157,7 @@ const Homepage = () => {
   };
 
   // ---------------------------------------------------------------------------
-  // NEXT & PREVIOUS QUESTION
+  // 4) NAVIGATION: NEXT & PREVIOUS QUESTION
   // ---------------------------------------------------------------------------
   const handleNextQuestion = () => {
     if (filteredQuestions.length === 0) return;
@@ -164,9 +171,7 @@ const Homepage = () => {
     if (filteredQuestions.length === 0) return;
     // Cycle backward
     setCurrentQuestionIndex((prevIndex) =>
-      prevIndex === 0
-        ? filteredQuestions.length - 1
-        : prevIndex - 1
+      prevIndex === 0 ? filteredQuestions.length - 1 : prevIndex - 1
     );
   };
 
@@ -182,35 +187,52 @@ const Homepage = () => {
   };
 
   // ---------------------------------------------------------------------------
-  // REMAINING GAME LOGIC
+  // 5) DETECT IF A QUESTION IS VISUAL
+  // ---------------------------------------------------------------------------
+  const isVisualQuestion = (questionObj) => {
+    return (
+      questionObj.categories?.includes("Visual Questions") &&
+      questionObj.imageQuestion
+    );
+  };
+
+  // ---------------------------------------------------------------------------
+  // 6) GAME LOGIC: SELECT OPTIONS, DELETE, CHECK ANSWERS
   // ---------------------------------------------------------------------------
   const handleSelectOption = (option) => {
-    if (!gameOver) {
-      const currentAttempt = attempts[currentAttemptIndex];
-      const filledGuesses = currentAttempt.filter((guess) => guess.value !== "");
+    if (gameOver) return;
 
-      // Prevent duplicates in the same attempt
-      if (filledGuesses.find((guess) => guess.value === option)) {
-        setDisplayResult("You have already selected this guess in the current attempt.");
-        return;
-      }
+    const currentAttempt = attempts[currentAttemptIndex];
+    const filledGuesses = currentAttempt.filter((guess) => guess.value !== "");
 
-      // If attempt not full, add guess
-      if (filledGuesses.length < 5) {
-        const newAttempts = attempts.map((attempt) =>
-          attempt.map((guess) => ({ ...guess }))
-        );
-        const optionIndex = newAttempts[currentAttemptIndex].findIndex(
-          (guess) => guess.value === ""
-        );
-        if (optionIndex !== -1) {
-          newAttempts[currentAttemptIndex][optionIndex] = { value: option, status: "" };
-          setAttempts(newAttempts);
-          setDisplayResult("");
-        }
-      } else {
-        setDisplayResult("Current attempt is full. Submit your guess or delete a guess.");
+    // Prevent duplicates in the same attempt
+    if (filledGuesses.find((guess) => guess.value === option)) {
+      setDisplayResult(
+        "You have already selected this guess in the current attempt."
+      );
+      return;
+    }
+
+    // If attempt not full, add guess
+    if (filledGuesses.length < 5) {
+      const newAttempts = attempts.map((attempt) =>
+        attempt.map((guess) => ({ ...guess }))
+      );
+      const optionIndex = newAttempts[currentAttemptIndex].findIndex(
+        (guess) => guess.value === ""
+      );
+      if (optionIndex !== -1) {
+        newAttempts[currentAttemptIndex][optionIndex] = {
+          value: option,
+          status: "",
+        };
+        setAttempts(newAttempts);
+        setDisplayResult("");
       }
+    } else {
+      setDisplayResult(
+        "Current attempt is full. Submit your guess or delete a guess."
+      );
     }
   };
 
@@ -247,7 +269,9 @@ const Homepage = () => {
       const evaluation = currentAttempt.map((guess, index) => {
         if (guess.value === correctAnswer[index].value) {
           return { ...guess, status: "green" };
-        } else if (correctAnswer.some((ans) => ans.value === guess.value)) {
+        } else if (
+          correctAnswer.some((ans) => ans.value === guess.value)
+        ) {
           return { ...guess, status: "yellow" };
         } else {
           return { ...guess, status: "gray" };
@@ -277,7 +301,7 @@ const Homepage = () => {
         setDisplayResult("Correct sequence!");
         setGameOver(true);
       } else if (currentAttemptIndex === 4) {
-        // Out of attempts => show correct
+        // Out of attempts => show correct after 3 seconds
         setTimeout(() => {
           const correctAttempt = correctAnswer.map((ans) => ({
             value: ans.value,
@@ -304,48 +328,78 @@ const Homepage = () => {
     <div className="App">
       <h1 className="trizzle">Trizzle</h1>
 
-      {/* Container that holds QUESTION (left 2/3) and FILTER BUTTONS (right 1/3) */}
+      {/* Container that holds QUESTION (left 2/3) & FILTER BUTTONS (right 1/3) */}
       <div className="questionFilterContainer">
-        {/* Left side: Question Text */}
+        {/* Left side: either text-based question or a visual question */}
         <div className="questionContent">
-          {processedQuestion.length > 0 && (
-            <div>
-              {processedQuestion.map((line, index) => (
-                <div key={index} className="question">
-                  {line}
+          {filteredQuestions.length > 0 && (() => {
+            const qObj = filteredQuestions[currentQuestionIndex];
+
+            if (isVisualQuestion(qObj)) {
+              // It's a visual question
+              const imgSrc = revealFinalAnswer
+                ? qObj.imageQuestion.answerImage // labeled image if game over
+                : qObj.imageQuestion.questionImage; // blank image for normal play
+
+              return (
+                <div>
+                  {/* Optional text if you want instructions */}
+                  {qObj.text && <div className="question">{qObj.text}</div>}
+
+                  {/* Show the image, clickable => enlarge */}
+                  <img
+                    src={imgSrc}
+                    alt="Visual question"
+                    className="questionImage"
+                    onClick={() => {
+                      setModalImageSrc(imgSrc);
+                      setShowImageModal(true);
+                    }}
+                    style={{ maxWidth: "100%", cursor: "pointer" }}
+                  />
                 </div>
-              ))}
-            </div>
-          )}
+              );
+            } else {
+              // Normal text-based question
+              return (
+                <div>
+                  {processedQuestion.map((line, i) => (
+                    <div key={i} className="question">
+                      {line}
+                    </div>
+                  ))}
+                </div>
+              );
+            }
+          })()}
+
           <section className={gameOver ? "flash" : ""}>{displayResult}</section>
         </div>
 
-        {/* Right side: Filter & Nav Buttons */}
+        {/* Right side: Timer & Nav Buttons */}
         <div className="filterButtonsContainer">
-          {/* timer */}
+          {/* Timer always shows */}
           <Timer />
 
-  {/* Filter button with a magnifying glass icon (as a stand-in for "filter") */}
-  <button
-    className="filterButton"
-    onClick={() => setShowCategoryModal(true)}
-  >
-    &#128269;
-  </button>
+          {/* Filter button (magnifying glass) */}
+          <button
+            className="filterButton"
+            onClick={() => setShowCategoryModal(true)}
+          >
+            &#128269;
+          </button>
 
-  {/* Left arrow (←) for previous */}
-  <button className="filterButton" onClick={handlePrevQuestion}>
-    &#8592;
-  </button>
-
-  {/* Right arrow (→) for next */}
-  <button className="filterButton" onClick={handleNextQuestion}>
-    &#8594;
-  </button>
-</div>
-
+          {/* Prev & Next */}
+          <button className="filterButton" onClick={handlePrevQuestion}>
+            &#8592;
+          </button>
+          <button className="filterButton" onClick={handleNextQuestion}>
+            &#8594;
+          </button>
+        </div>
       </div>
 
+      {/* Category Selector Modal */}
       {showCategoryModal && (
         <CategorySelector
           allCategories={allCategories}
@@ -355,6 +409,14 @@ const Homepage = () => {
         />
       )}
 
+      {/* FULLSCREEN IMAGE MODAL for Visual Questions */}
+      {showImageModal && (
+        <div className="modalOverlay" onClick={() => setShowImageModal(false)}>
+          <img src={modalImageSrc} alt="Fullscreen" className="modalImage" />
+        </div>
+      )}
+
+      {/* The Answer Grid & Buttons */}
       <div className="contentWrapper">
         <div className="answerGridContainerAnswerContainer">
           <AnswerGrid attempts={attempts} fadeIn={revealFinalAnswer} />

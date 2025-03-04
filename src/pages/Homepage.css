@@ -123,6 +123,27 @@
   padding: 0;
 }
 
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.modalImage {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
 /* If you prefer a different shade of pastel green, adjust the background-color. 
    E.g. #90EE90 is "lightgreen." 
    #77dd77 is another "pastel green." 
