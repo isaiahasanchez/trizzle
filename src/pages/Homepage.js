@@ -255,7 +255,7 @@ const Homepage = () => {
   const handleCheckAnswers = () => {
     const currentAttempt = attempts[currentAttemptIndex];
     const guessString = currentAttempt.map((guess) => guess.value).join("");
-
+  
     // Must fill all 5 slots
     if (currentAttempt.filter((guess) => guess.value !== "").length === 5) {
       // Avoid repeated guesses
@@ -264,7 +264,7 @@ const Homepage = () => {
         return;
       }
       setHistory([...history, guessString]);
-
+  
       // Evaluate each guess
       const evaluation = currentAttempt.map((guess, index) => {
         if (guess.value === correctAnswer[index].value) {
@@ -277,7 +277,7 @@ const Homepage = () => {
           return { ...guess, status: "gray" };
         }
       });
-
+  
       // Update global optionStatuses
       const newOptionStatuses = { ...optionStatuses };
       evaluation.forEach((guess) => {
@@ -291,15 +291,16 @@ const Homepage = () => {
         }
       });
       setOptionStatuses(newOptionStatuses);
-
+  
       // Commit evaluation to attempts
       attempts[currentAttemptIndex] = evaluation;
       setAttempts([...attempts]);
-
+  
       // Check for success or next attempt
       if (evaluation.every((guess) => guess.status === "green")) {
         setDisplayResult("Correct sequence!");
         setGameOver(true);
+        setRevealFinalAnswer(true); // <-- ADDED LINE
       } else if (currentAttemptIndex === 4) {
         // Out of attempts => show correct after 3 seconds
         setTimeout(() => {
@@ -320,6 +321,7 @@ const Homepage = () => {
       setDisplayResult("Each guess must be exactly 5 answers long.");
     }
   };
+  
 
   // ---------------------------------------------------------------------------
   // RENDER
