@@ -1178,7 +1178,82 @@
         "Bueno",
         "Take5"
       ]
+    },
+    {
+      "id": 35,
+      "categories": ["Geography"],
+      "text": "Name the top five U.S. cities by population after Los Angeles and New York.",
+      "options": [
+        "Chicago",
+        "Houston",
+        "Phoenix",
+        "Philadelphia",
+        "San Antonio",
+        "San Diego",
+        "Dallas",
+        "San Jose",
+        "Austin",
+        "Jacksonville",
+        "Fort Worth",
+        "Columbus",
+        "Charlotte",
+        "Indianapolis",
+        "San Francisco",
+        "Seattle",
+        "Denver",
+        "Washington",
+        "Boston",
+        "El Paso",
+        "Nashville",
+        "Detroit",
+        "Oklahoma City"
+      ],
+      "answer": [
+        "Chicago",
+        "Houston",
+        "Phoenix",
+        "Philadelphia",
+        "San Antonio"
+      ]
+    },{
+      "id": 36,
+      "categories": ["TV", "Pop Culture"],
+      "text": "Which of these popular shows have the most Emmy nominations?",
+      "options": [
+        "Saturday Night Live",
+        "Game of Thrones",
+        "Stranger Things",
+        "Succession",
+        "Mad Men",
+        "The Sopranos",
+        "30 Rock",
+        "The Simpsons",
+        "The Handmaid’s Tale",
+        "Seinfeld",
+        "Veep",
+        "Will & Grace",
+        "Breaking Bad",
+        "Friends",
+        "The Crown",
+        "Modern Family",
+        "The Big Bang Theory",
+        "Curb Your Enthusiasm",
+        "Sex and the City",
+        "Boardwalk Empire",
+        "Law & Order",
+        "Ted Lasso",
+        "The Marvelous Mrs. Maisel"
+      ],
+      "answer": [
+        "Saturday Night Live",
+        "Game of Thrones",
+        "Mad Men",
+        "The Sopranos",
+        "30 Rock"
+      ]
     }
+    
+    
     
   ]
 }
