@@ -71,7 +71,7 @@ const Homepage = () => {
   // 1) FETCH THE ENTIRE QUESTIONS LIST
   // ---------------------------------------------------------------------------
   useEffect(() => {
-    fetch("https://raw.githubusercontent.com/isaiahasanchez/trizzle-db/main/db.json")
+    fetch("/db.json")
       .then((res) => res.json())
       .then((data) => {
         if (data.questions && data.questions.length > 0) {
