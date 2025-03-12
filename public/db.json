@@ -1251,7 +1251,87 @@
         "The Sopranos",
         "30 Rock"
       ]
+    },
+    {
+      "id": 37,
+      "categories": ["Movies"],
+      "text": "Rank these iconic first entries by Rotten Tomatoes critic score. Which five have the highest scores (no duplicates)?",
+      "options": [
+        "ToyStory",
+        "DieHard",
+        "IronMan",
+        "Star Wars: ANH",
+        "Indy: Raiders",
+        "JurassicPk",
+        "LOTR: Fellowship",
+        "Spidey(2002)",
+        "Frozen(2013)",
+        "Shrek",
+        "TheMatrix",
+        "BatmanBegins",
+        "Hunger Gm",
+        "X-Men(2000)",
+        "HP1",
+        "DespMe",
+        "Pirates 1",
+        "Scream(1996)",
+        "M:I (1996)",
+        "TheMummy(99)",
+        "Transformers",
+        "Fast&Furious",
+        "Twilight1"
+      ],
+      "answer": [
+        "ToyStory",
+        "IronMan",
+        "Star Wars: ANH",
+        "JurassicPk",
+        "LOTR: Fellowship"
+      ]
+    },
+    {
+      "id": 38,
+      "categories": ["Visual Questions"],
+      "imageQuestion": {
+        "questionImage": "images/logoquestion.png",
+        "answerImage": "images/logoanswer.png"
+      },
+      "text": "Put these zoomed-in logos in order from left to right.",
+      "options": [
+        "Swiffer",
+        "Clorox",
+        "Dawn",
+        "Purell",
+        "Mr. Clean",
+        "Coke",
+        "Chips Ahoy",
+        "Quaker",
+        "Pantene",
+        "Gatorade",
+        "Kleenex",
+        "Campbell's",
+        "Oreos",
+        "Cheez-It",
+        "Huggies",
+        "Axe",
+        "Pepsi",
+        "Kraft",
+        "Colgate",
+        "M&Ms",
+        "Starbucks",
+        "HeadShoulders",
+        "Progresso"
+      ],
+      "answer": [
+        "Swiffer",
+        "Clorox",
+        "Dawn",
+        "Purell",
+        "Mr. Clean"
+      ]
     }
+    
+    
     
     
     
