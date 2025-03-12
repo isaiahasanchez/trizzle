@@ -1293,7 +1293,7 @@
       "id": 38,
       "categories": ["Visual Questions"],
       "imageQuestion": {
-        "questionImage": "images/logoquestion.png",
+        "questionImage": "images/logoquestionclean.png",
         "answerImage": "images/logoanswer.png"
       },
       "text": "Put these zoomed-in logos in order from left to right.",
