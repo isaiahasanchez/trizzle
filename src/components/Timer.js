@@ -109,9 +109,7 @@ const Timer = () => {
 
   return (
     <div className="timerContainer">
-      <div className={`timerDisplay ${flashRed ? 'flashRed' : ''}`}>
-        {formatTime()}
-      </div>
+
 
       <div className="timerControls">
         {/* Pencil icon to toggle editing */}
@@ -134,6 +132,10 @@ const Timer = () => {
           {isRunning ? 'Pause' : 'Start'}
         </button>
         <button onClick={handleReset}>Reset</button>
+
+        <div className={`timerDisplay ${flashRed ? 'flashRed' : ''}`}>
+        {formatTime()}
+      </div>
       </div>
     </div>
   );

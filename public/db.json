@@ -1329,7 +1329,45 @@
         "Purell",
         "Mr. Clean"
       ]
+    },
+    {
+      "id": 39,
+      "categories": ["Geography"],
+      "text": "Which 5 US states have the smallest populations (no duplicates)? 1 being the smallest",
+      "options": [
+        "Alabama",
+        "Alaska",
+        "Arizona",
+        "Arkansas",
+        "Colorado",
+        "Delaware",
+        "Hawaii",
+        "Idaho",
+        "Iowa",
+        "Kansas",
+        "Kentucky",
+        "Maine",
+        "Montana",
+        "N. Dakota",
+        "Nebraska",
+        "NewHamps",
+        "Oregon",
+        "R. Island",
+        "S. Dakota",
+        "Vermont",
+        "W.Virgin",
+        "Wyoming",
+        "Utah"
+      ],
+      "answer": [
+        "Wyoming",
+        "Vermont",
+        "Alaska",
+        "N. Dakota",
+        "S. Dakota"
+      ]
     }
+    
     
     
     
