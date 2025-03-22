@@ -1366,7 +1366,121 @@
         "N. Dakota",
         "S. Dakota"
       ]
+    },
+    {
+      "id": 40,
+      "categories": ["Movies"],
+      "text": "Which 5 of these 90s action movies earned the highest worldwide box office (no duplicates)?",
+      "options": [
+        "Independ Day",
+        "Terminat 2",
+        "Armagedn",
+        "The Rock",
+        "Golden Eye",
+        "Men In Black",
+        "Die Hard 3",
+        "Face/Off",
+        "Speed",
+        "The Matrix",
+        "Con Air",
+        "True Lies",
+        "Air Force 1",
+        "Total Recall",
+        "Cliff Hang",
+        "Point Break",
+        "Under Siege",
+        "Broken Arrow",
+        "Demolitn Man",
+        "Univ Soldier",
+        "Heat 1995",
+        "Lethal Weapon 3",
+        "Bad Boys"
+      ],
+      "answer": [
+        "Independ Day",
+        "Men In Black",
+        "Armagedn",
+        "Terminat 2",
+        "The Matrix"
+      ]
+    },
+    {
+      "id": 41,
+      "categories": ["Movies"],
+      "text": "Which 5 of these 2010s comedies had the highest worldwide box office (no duplicates)?",
+      "options": [
+        "Hangover Part II",
+        "Hangover Part III",
+        "Ted",
+        "The Other Guys",
+        "Horrible Bosses",
+        "Brides Maids",
+        "21 Jump Street",
+        "22 Jump Street",
+        "Ride Along",
+        "The Heat",
+        "Spy",
+        "Neighbors",
+        "Girls Trip",
+        "Daddys Home",
+        "Central Intelli Gence",
+        "Night School",
+        "Blockers",
+        "Baywatch",
+        "Jumanji Welcome Jungle",
+        "Grown Ups",
+        "Grown Ups 2",
+        "Were The Millers",
+        "Game Night"
+      ],
+      "answer": [
+        "Jumanji Welcome Jungle",
+        "Hangover Part II",
+        "Ted",
+        "Hangover Part III",
+        "22 Jump Street"
+      ]
+    },
+    {
+      "id": 42,
+      "categories": ["Music"],
+      "text": "Which 5 of these 2000s hip hop albums sold the most worldwide (no duplicates)?",
+      "options": [
+        "The Eminem Show",
+        "The Marshall Mathers",
+        "Get Rich or Die Tryin",
+        "Speaker Boxx Love Below",
+        "Country Grammar",
+        "The Massacre",
+        "Nellyville",
+        "The Blueprint",
+        "College Dropout",
+        "Late Registration",
+        "The Black Album",
+        "Encore",
+        "Relapse",
+        "Carter III",
+        "Under Construct",
+        "Paper Trail",
+        "Chicken n Beer",
+        "T.I. King",
+        "G Unit Beg Mercy",
+        "Tha Carter II",
+        "Pain Is Love",
+        "Rule 3 36",
+        "The Love Below"
+      ],
+      "answer": [
+        "The Eminem Show",
+        "The Marshall Mathers",
+        "Get Rich or Die Tryin",
+        "Speaker Boxx Love Below",
+        "Country Grammar"
+      ]
     }
+    
+    
+    
     
     
     
