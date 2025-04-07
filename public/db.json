@@ -1477,8 +1477,192 @@
         "Speaker Boxx Love Below",
         "Country Grammar"
       ]
+    },
+    {
+      "id": 43,
+      "categories": ["Pop Culture"],
+      "text": "Which 5 of these 2024 US best-selling vehicles sold the most units (Car and driver)?",
+      "options": [
+        "Ford F-Series",
+        "Chevy Silvrado",
+        "Toyota RAV4",
+        "Tesla Model Y",
+        "Honda CR-V",
+        "Ram Pickup",
+        "GMC Sierra",
+        "Toyota Camry",
+        "Nissan Rogue",
+        "Honda Civic",
+        "Chevy Equinox",
+        "Toyota Corolla",
+        "Jeep Grand Cherokee",
+        "Hyundai Tucson",
+        "Chevy Trax",
+        "Ford Explorer",
+        "Toyota Tacoma",
+        "Subaru Cross Trek",
+        "Subaru Forester",
+        "Toyota Highland",
+        "Subaru Outback",
+        "Honda Accord",
+        "Kia Sportage"
+      ],
+      "answer": [
+        "Ford F-Series",
+        "Chevy Silvrado",
+        "Toyota RAV4",
+        "Tesla Model Y",
+        "Honda CR-V"
+      ]
+    },
+    {
+      "id": 44,
+      "categories": ["Geography"],
+      "text": "Which 5 of these countries produce the most electricity worldwide (wpr.com)?",
+      "options": [
+        "China",
+        "United States",
+        "India",
+        "Russia",
+        "Japan",
+        "Brazil",
+        "Canada",
+        "South Korea",
+        "France",
+        "Germany",
+        "Saudi Arabia",
+        "Iran",
+        "Mexico",
+        "UKingdom",
+        "Turkey",
+        "Nigeria",
+        "Pakistan",
+        "Spain",
+        "Italy",
+        "Vietnam",
+        "Poland",
+        "Indone Sia",
+        "Australi a"
+      ],
+      "answer": [
+        "China",
+        "United States",
+        "India",
+        "Russia",
+        "Japan"
+      ]
+    },
+    {
+      "id": 45,
+      "categories": ["Food"],
+      "text": "Which 5 of these 2023 US sodas have the largest market share?",
+      "options": [
+        "Coca Cola",
+        "Pepsi",
+        "Diet Coke",
+        "Dr Pepper",
+        "Mountain Dew",
+        "Sprite",
+        "Fanta",
+        "Coke Zero",
+        "Diet Pepsi",
+        "Canada Dry",
+        "7 Up",
+        "A&W Root",
+        "RC Cola",
+        "Sunkist",
+        "Crush",
+        "Barqs",
+        "Faygo",
+        "Squirt",
+        "Mello Yell",
+        "Bubly",
+        "La Croix",
+        "Vault",
+        "Fresca"
+      ],
+      "answer": [
+        "Coca Cola",
+        "Dr Pepper",
+        "Pepsi",
+        "Sprite",
+        "Diet Coke"
+      ]
+    },
+    {
+      "id": 46,
+      "categories": ["General"],
+      "text": "Which 5 of these 2024 biggest public companies are valued highest by market cap? (Forbes)",
+      "options": [
+        "Micro Soft",
+        "Apple",
+        "Nvidia",
+        "Alphabet",
+        "Amazon",
+        "Saudi Aramco",
+        "Meta",
+        "Eli Lilly",
+        "Taiwan Semi",
+        "Broadcom",
+        "JP Morgan",
+        "Novo Nord",
+        "Tesla",
+        "Visa",
+        "Exxon Mobil",
+        "Walmart",
+        "United Health",
+        "Tencent",
+        "Master Card",
+        "LVMH",
+        "Procter Gamble",
+        "Samsung Elec",
+        "Johnson & J"
+      ],
+      "answer": [
+        "Microsoft",
+        "Apple",
+        "Nvidia",
+        "Alphabet",
+        "Amazon"
+      ]
+    },
+    {
+      "id": 47,
+      "categories": ["Food"],
+      "text": "Which 5 of these 2024 US restaurant chains have the highest brand awareness? (Statista KPI survey)",
+      "options": [
+        "Mc Donald's",
+        "Burger King",
+        "K F C",
+        "Subway",
+        "Taco Bell",
+        "Wendy's",
+        "Domino's Pizza",
+        "Pizza Hut",
+        "Starbucks",
+        "Applebee's",
+        "Chick-fil-A",
+        "Dunkin' Donuts",
+        "Arby's",
+        "IHOP",
+        "Popeyes",
+        "Chipotle",
+        "Panda Express",
+        "Panera Bread",
+        "Jimmy John's",
+        "Hardee's",
+        "Sonic",
+        "Five Guys",
+        "Little Caesars"
+      ],
+      "answer": [
+        "Mc Donald's",
+        "Burger King",
+        "K F C",
+        "Subway",
+        "Taco Bell"
+      ]
     }
-    
     
     
     
